@@ -4,6 +4,7 @@ resources :users
 resources :sessions
 resources :messages
 resources :conversations
+resources :friendships
 root "sessions#index"
 get    '/login',   to: 'sessions#new'
 post   '/login',   to: 'sessions#create'
