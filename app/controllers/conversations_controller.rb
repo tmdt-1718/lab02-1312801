@@ -10,6 +10,7 @@ def new
 end
 def show
 @message = Message.new
+  impressionist(@conversation)
 end
 
 

@@ -1,4 +1,16 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a><%= link_to "Home",sessions_path%></a></li>
+  <li class="breadcrumb-item active">Messages</li>
+</ol>
 
-<div id="conversations">
   <%= render @conversations %>
-</div>
+
+<% content_for :js do%>
+<script type="text/javascript">
+$(".card").hover(function() {
+  $(this).addClass("conversation-highlight");
+}, function(){
+  $(this).removeClass("conversation-highlight");
+});
+</script>
+<%end%>

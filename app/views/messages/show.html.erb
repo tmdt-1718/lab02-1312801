@@ -1,0 +1,19 @@
+<%if  @message.impressionist_count ==0%>
+<div class="message-highlight">
+<div class="card">
+  <div class="card-body">
+    <%= @message.body %></li>
+  <span class="view">View:<%= @message.impressionist_count %></br></span>
+  <%=link_to "Back",conversations_path%>
+  </div>
+</div>
+</div>
+<% else %>
+<div class="card">
+  <div class="card-body">
+    <%= @message.body %></li>
+  <span class="view">View:<%= @message.impressionist_count %></br></span>
+  <%=link_to "Back",conversations_path%>
+  </div>
+</div>
+<%end%>

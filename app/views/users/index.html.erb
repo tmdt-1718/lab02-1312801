@@ -1,12 +1,10 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a><%= link_to "Home",sessions_path%></a></li>
+  <li class="breadcrumb-item active"><%=current_user.name%></li>
+</ol>
 <h1>Users</h1>
-<h2>FriendLists</h2>
-<ul>
-  <% for friendship in current_user.friendships %>
-    <li>
-      <%=h friendship.friend.name %>
-      (<%= link_to "remove", friendship, :method => :delete %>)
-    </li>
-  <% end %>
-</ul>
 <h2>Messages</h2>
-<ul><%= render @users %></ul>
+<ul><%= render "users/user" %></ul>
+<%= link_to "Create new message",new_message_path(receiver_id: @user),class: 'btn btn-primary'%>
+<%= link_to "FriendList",friendships_path,class: 'btn btn-primary'%>
+<%= link_to "Sent",friendships_path,class: 'btn btn-primary'%>

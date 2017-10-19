@@ -1,4 +1,9 @@
-<p><%= message.body %></p>
+<div class="message-thumbnail">
+
+<li highlight><%= truncate(message.body) %></li>
 <p>at <strong><%= message.created_at %></strong><br>
   by <strong><%= message.user.name %></strong></p>
+<span class="view">View:<%= @message.impressionist_count %></br></span>
+  <%=link_to "Show message", message_path(message)%>
 <hr>
+</div>

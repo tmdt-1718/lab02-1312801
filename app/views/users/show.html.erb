@@ -3,7 +3,7 @@
 <ul>
   <% for friendship in @user.friendships %>
     <li>
-      <%=h friendship.friend.username %>
+      <%=h friendship.friend.name %>
       (<%= link_to "remove", friendship, :method => :delete %>)
     </li>
   <% end %>
@@ -14,6 +14,6 @@
 <h2>Friended by Users</h2>
 <ul>
   <% for user in @user.inverse_friends %>
-    <li><%=h user.username %></li>
+    <li><%=h user.name %></li>
   <% end %>
 </ul>

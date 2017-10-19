@@ -1,8 +1,13 @@
-<div>
-  Chatting with <%= conversation.with(current_user).name %>
-  <br>
-  <em><%= conversation.messages.last.body.truncate(50) %></em>
-  <br>
-  <%= link_to 'View conversation', conversation_path(conversation) %>
-  <hr>
+<div class="conversations">
+  <% conversation.messages.each do |message|%>
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title"><%=message.user.name%></h4>
+      <p class="card-text"><%= message.body%></p>
+      <span class="view">View:<%= conversation.impressionist_count %></br></span>
+  <%= link_to "Show",conversation_path(conversation),class: 'btn btn-primary'%>
+    </div>
+
+  </div>
+  <%end%>
 </div>

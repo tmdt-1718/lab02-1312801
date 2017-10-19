@@ -1,8 +1,11 @@
 class Conversation < ApplicationRecord
+  is_impressionable
+  belongs_to :user
   belongs_to :author, class_name: 'User'
 belongs_to :receiver, class_name: 'User'
 validates :author, uniqueness: {scope: :receiver}
 has_many :messages, -> { order(created_at: :asc) }, dependent: :destroy
+has_many :impressionists
 scope :participating, -> (user) do
 where("(conversations.author_id = ? OR conversations.receiver_id = ?)", user.id, user.id)
 end
