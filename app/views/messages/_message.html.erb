@@ -3,13 +3,13 @@
 <li highlight><%= truncate(message.body) %></li>
 <p>at <strong><%= message.created_at %></strong><br>
   by <strong><%= message.user.name %></strong></p>
-  <%=link_to "Show message", message_path(message)%>
   </div>
 <hr>
 <% else%>
 <li highlight><%= truncate(message.body) %></li>
 <p>at <strong><%= message.created_at %></strong><br>
   by <strong><%= message.user.name %></strong></p>
-  <%=link_to "Show message", message_path(message)%>
+  
+  Seen at <%=Time.current%>
 <hr>
 <% end %>

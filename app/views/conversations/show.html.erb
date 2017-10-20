@@ -1,6 +1,7 @@
 <ol class="breadcrumb">
   <li class="breadcrumb-item"><a><%= link_to "Home",sessions_path%></a></li>
-  <li class="breadcrumb-item active">Messages</li>
+  <li class="breadcrumb-item "><%= link_to "Conversation",conversations_path%></li>
+  <li class="breadcrumb-item active"><%= @conversation.with(current_user).name %></li>
 </ol>
 <h1>Chatting with <%= @conversation.with(current_user).name %></h1>
 

@@ -1,4 +1,9 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a><%= link_to "Home",sessions_path%></a></li>
+  <li class="breadcrumb-item active">FriendList</li>
+</ol>
 <h1>FriendList</h1>
+<%if logged_in?%>
 <% if current_user.friendships.count ==0%>
 <p>U dont have friend</p>
 <p>Add some friend</p>
@@ -8,9 +13,14 @@
   <li>
     <%=  friendship.friend.name %>
     (<%= link_to "remove", friendship, :method => :delete %>)
+      <%=  link_to 'send a message', new_message_path(receiver_id: friendship.friend) %>
   </li>
 <% end %>
 <p><%= link_to "Find Friends", users_path %></p>
+
 </ul>
 <%end%>
-<ul>
+<%else%>
+<h2>U haven't login yet, login to connect with the world</h2>
+<%= link_to "Login",login_path,class: 'btn btn-primary'%>
+<%end%>

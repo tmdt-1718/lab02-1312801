@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
-  before_action :find_conversation!, only: [:new, :show]
+  before_action :find_conversation!
   def index
     @message=Message.all
   end

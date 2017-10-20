@@ -1,7 +1,7 @@
 class Conversation < ApplicationRecord
   acts_as_readable on: :created_at
   is_impressionable
-  belongs_to :user
+belongs_to :user, optional: true
   belongs_to :author, class_name: 'User'
 belongs_to :receiver, class_name: 'User'
 validates :author, uniqueness: {scope: :receiver}
