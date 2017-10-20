@@ -1,12 +1,17 @@
-<% if current_user.messages.count ==0%>
+
 <p>U havent send an</p>
-<% current_user.messages.each do |message|%>
+<% @users.each do |user|%>
+<% if current_user.id==user.id %>
 <div class="card">
   <div class="card-body">
-    <h4 class="card-title"><%=message.user.name%></h4>
-    <p class="card-text"><%=message.body%></p>
-<%= link_to "Show",conversation_path(receiver_id: @user),class: 'btn btn-primary'%>
+    <p><%=user.name%>(You)</p>
   </div>
-
+</div>
+<% else %>
+<div class="card">
+  <div class="card-body">
+    <p><%=user.name%></p> <%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %>
+  </div>
 </div>
 <%end%>
+<% end %>

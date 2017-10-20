@@ -1,4 +1,5 @@
 class Conversation < ApplicationRecord
+  acts_as_readable on: :created_at
   is_impressionable
   belongs_to :user
   belongs_to :author, class_name: 'User'

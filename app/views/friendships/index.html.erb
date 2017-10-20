@@ -1,2 +1,16 @@
 <h1>FriendList</h1>
-<ul><%= render @friendships %></ul>
+<% if current_user.friendships.count ==0%>
+<p>U dont have friend</p>
+<p>Add some friend</p>
+<%= link_to "Users", users_path%>
+<% else %>
+<% current_user.friendships.each do |friendship| %>
+  <li>
+    <%=  friendship.friend.name %>
+    (<%= link_to "remove", friendship, :method => :delete %>)
+  </li>
+<% end %>
+<p><%= link_to "Find Friends", users_path %></p>
+</ul>
+<%end%>
+<ul>

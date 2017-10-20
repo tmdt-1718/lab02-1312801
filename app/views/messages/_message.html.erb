@@ -1,9 +1,15 @@
-<div class="message-thumbnail">
-
+<% if message.mark_as_read! for: current_user %>
+<div class="message-highlight">
 <li highlight><%= truncate(message.body) %></li>
 <p>at <strong><%= message.created_at %></strong><br>
   by <strong><%= message.user.name %></strong></p>
-<span class="view">View:<%= @message.impressionist_count %></br></span>
+  <%=link_to "Show message", message_path(message)%>
+  </div>
+<hr>
+<% else%>
+<li highlight><%= truncate(message.body) %></li>
+<p>at <strong><%= message.created_at %></strong><br>
+  by <strong><%= message.user.name %></strong></p>
   <%=link_to "Show message", message_path(message)%>
 <hr>
-</div>
+<% end %>

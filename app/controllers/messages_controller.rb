@@ -1,5 +1,8 @@
 class MessagesController < ApplicationController
-  before_action :find_conversation!
+  before_action :find_conversation!, only: [:new, :show]
+  def index
+    @message=Message.all
+  end
 def new
 @message = current_user.messages.build
 end
@@ -28,9 +31,11 @@ end
 def find_conversation!
   if params[:receiver_id]
     @receiver = User.find_by(id: params[:receiver_id])
+    redirect_to(conversations_path) and return unless @receiver
     @conversation = Conversation.between(current_user.id, @receiver.id)[0]
   else
     @conversation = Conversation.find_by(id: params[:conversation_id])
+    redirect_to(conversations_path)  and return unless @conversation && @conversation.participates?(current_user)
   end
 end
 end

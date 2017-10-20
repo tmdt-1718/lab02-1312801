@@ -2,10 +2,13 @@
   <a class="navbar brand">FastMail</a>
   <ul class="navbar-nav mr-auto">
     <li class="nav-item active">
-<a class="nav-link" href="/sessions/index">Home</a>
+<a class="nav-link"><%= link_to "Home",sessions_path%></a>
     </li>
     <li class="nav-item" >
       <a class="nav-link" ><%= link_to "Messages",conversations_path%></a>
+    </li>
+    <li class="nav-item" >
+      <a class="nav-link" ><%= link_to "FriendList",friendships_path%></a>
     </li>
     <% if logged_in? %>
   <li><%= link_to current_user[:name],users_path,class:'link-to-text-color'%></li>

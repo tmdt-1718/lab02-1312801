@@ -3,8 +3,4 @@
   <li class="breadcrumb-item active"><%=current_user.name%></li>
 </ol>
 <h1>Users</h1>
-<h2>Messages</h2>
 <ul><%= render "users/user" %></ul>
-<%= link_to "Create new message",new_message_path(receiver_id: @user),class: 'btn btn-primary'%>
-<%= link_to "FriendList",friendships_path,class: 'btn btn-primary'%>
-<%= link_to "Sent",friendships_path,class: 'btn btn-primary'%>

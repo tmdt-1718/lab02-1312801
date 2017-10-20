@@ -3,8 +3,13 @@
   <li class="breadcrumb-item active">Messages</li>
 </ol>
 
-  <%= render @conversations %>
-
+<% if @conversations.count ==0%>
+<p>U dont have any conversations</p>
+<p> Find a user to add friend</p>
+<%= link_to "Users",users_path%>
+<%else%>
+<%= render @conversations %>
+<% end %>
 <% content_for :js do%>
 <script type="text/javascript">
 $(".card").hover(function() {

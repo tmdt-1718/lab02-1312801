@@ -33,6 +33,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'bcrypt',         '3.1.11'
 gem 'impressionist'
+gem 'unread'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
