@@ -34,6 +34,13 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'bcrypt',         '3.1.11'
 gem 'impressionist'
 gem 'unread'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
+gem 'omniauth'
+gem 'omniauth-facebook'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

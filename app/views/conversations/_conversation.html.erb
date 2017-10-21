@@ -14,6 +14,7 @@ Chatting with <%= conversation.with(current_user).name %>
 <br>
 <%= link_to "Create new message",conversation_path(conversation),class: 'btn btn-primary'%>
 <%= link_to "FriendList",friendships_path,class: 'btn btn-primary'%>
+<%= link_to "Sent Message", messages_path,class: 'btn btn-primary'%>
 <% end %>
 
   <hr>

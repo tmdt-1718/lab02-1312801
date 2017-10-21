@@ -1,7 +1,8 @@
 class MessagesController < ApplicationController
-  before_action :find_conversation!
+  before_action :find_conversation!, except: [:index]
   def index
-    @message=Message.all
+    @messages=Message.all
+    @messages=current_user.messages.paginate(page: params[:page], :per_page => 10)
   end
 def new
 @message = current_user.messages.build
@@ -26,7 +27,7 @@ end
 private
 
 def message_params
-  params.require(:message).permit(:body)
+  params.require(:message).permit(:body, :picture)
 end
 def find_conversation!
   if params[:receiver_id]

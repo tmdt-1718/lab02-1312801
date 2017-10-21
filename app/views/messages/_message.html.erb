@@ -3,13 +3,19 @@
 <li highlight><%= truncate(message.body) %></li>
 <p>at <strong><%= message.created_at %></strong><br>
   by <strong><%= message.user.name %></strong></p>
+ <%= image_tag message.picture.url if message.picture? %> </br>
+ <span class="timestamp">
+  Posted <%= time_ago_in_words(message.created_at) %> ago.</br>
+</span>
   </div>
 <hr>
 <% else%>
 <li highlight><%= truncate(message.body) %></li>
 <p>at <strong><%= message.created_at %></strong><br>
   by <strong><%= message.user.name %></strong></p>
-  
+ <%= image_tag message.picture.url if message.picture? %> </br>
+ <span class="timestamp">
+</span>
   Seen at <%=Time.current%>
 <hr>
 <% end %>
