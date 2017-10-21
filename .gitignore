@@ -16,7 +16,7 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-
+/config/facebook.yml
 /node_modules
 /yarn-error.log
 
