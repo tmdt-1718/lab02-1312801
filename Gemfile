@@ -41,6 +41,8 @@ gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'figaro'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
