@@ -1,7 +1,7 @@
 class MessagesController < ApplicationController
   before_action :find_conversation!, except: [:index]
   def index
-    @messages=Message.all
+    @messages=Message.all.order('updated_at DESC')
     @messages=current_user.messages.paginate(page: params[:page], :per_page => 10)
   end
 def new
@@ -20,9 +20,8 @@ def create
   @message = current_user.messages.build(message_params)
   @message.conversation_id = @conversation.id
   @message.save!
+   UserMailer.welcome_email(@receiver).deliver_now
   flash[:success] = "Your message was sent!"
-  byebug
- UserMailer.welcome_email(current_user).deliver_later
   redirect_to conversation_path(@conversation)
 end
 
