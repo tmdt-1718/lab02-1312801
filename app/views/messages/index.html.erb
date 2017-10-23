@@ -4,6 +4,9 @@
 <div class="card">
   <div class="card-body">
     <h4><%=message.body%></h4>
+    <span class="timestamp">
+     Posted <%= time_ago_in_words(message.created_at) %> ago.</br>
+   </span>
   </div>
 </div>
 <%end%>

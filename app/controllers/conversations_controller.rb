@@ -9,6 +9,8 @@ def new
   @message = current_user.messages.build
 end
 def show
+  
+  @receiver = User.find_by(id: params[:receiver_id])
 @message = Message.new
   impressionist(@conversation)
 end

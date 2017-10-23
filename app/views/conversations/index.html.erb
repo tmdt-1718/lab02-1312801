@@ -8,8 +8,18 @@
   <p> Find a user to add friend</p>
   <%=  link_to 'send a message', new_message_path(receiver_id: @user) %>
   <%else%>
-  <%= render @conversations %>
-  <% end %>
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+    <div id="myDropdown" class="dropdown-content">
+      <% current_user.friendships.each do |friendship|%>
+      <a><%=  link_to friendship.friend.name, new_message_path(receiver_id: friendship.friend) %></a>
+      <%end%>
+    </div>
+  </div>
+  <div class="main">
+    <%= render @conversations %>
+    <% end %>
+  </div>
 
 <%else%>
 <h1>U havent login yet,Login to communicate with your friend</h1>
@@ -23,5 +33,13 @@ $(".card").hover(function() {
 }, function(){
   $(this).removeClass("conversation-highlight");
 });
+$(document).ready(function(){
+    $('.navbar .dropdown').hover(function() {
+        $(this).find('.dropdown-menu').first().stop(true, true).delay(250).slideDown();
+    }, function() {
+        $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp()
+    });
+})
 </script>
+
 <%end%>

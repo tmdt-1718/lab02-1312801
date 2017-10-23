@@ -20,9 +20,14 @@ def create
   @message = current_user.messages.build(message_params)
   @message.conversation_id = @conversation.id
   @message.save!
+  if params[:receiver_id]
    UserMailer.welcome_email(@receiver).deliver_now
   flash[:success] = "Your message was sent!"
   redirect_to conversation_path(@conversation)
+else
+  flash[:success] = "Your message was sent!"
+  redirect_to conversation_path(@conversation)
+end
 end
 
 private
