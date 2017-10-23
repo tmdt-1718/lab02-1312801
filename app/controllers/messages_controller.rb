@@ -21,6 +21,8 @@ def create
   @message.conversation_id = @conversation.id
   @message.save!
   flash[:success] = "Your message was sent!"
+  byebug
+ UserMailer.welcome_email(current_user).deliver_later
   redirect_to conversation_path(@conversation)
 end
 
