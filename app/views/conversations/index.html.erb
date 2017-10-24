@@ -4,7 +4,7 @@
 </ol>
 
 <%if logged_in?%>
-  <% if @conversations.count ==0%>
+  <% if current_user.conversations.count ==0%>
   <p>U dont have any conversations</p>
   <p> Find a user to add friend</p>
   <%=  link_to 'send a message', new_message_path(receiver_id: @user) %>

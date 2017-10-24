@@ -1,14 +1,14 @@
 development:
   facebook:
-app_id: 2021434918141226
-secret: e98ea6ed2d78bcd36408f03529700dfa
+app_id: 169316370317221
+secret: 0d61cf0ca4addbe95d838b8120cba04c
 
 test:
   facebook:
-app_id: 2021434918141226
-secret: e98ea6ed2d78bcd36408f03529700dfa
+app_id: 169316370317221
+secret: 0d61cf0ca4addbe95d838b8120cba04c
 
 production:
   facebook:
-app_id: 2021434918141226
-secret: e98ea6ed2d78bcd36408f03529700dfa
+app_id: 169316370317221
+secret: 0d61cf0ca4addbe95d838b8120cba04c

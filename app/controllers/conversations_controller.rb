@@ -4,6 +4,8 @@ before_action :check_participating!, except: [:index]
 def index
   if(params[:user_id])
   @conversations = Conversation.participating(current_user).order('updated_at DESC')
+else
+@conversations=Conversation.all
 end
 end
 def new
