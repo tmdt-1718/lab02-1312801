@@ -23,8 +23,8 @@
   </div>
 
 <%else%>
-<h1>U havent login yet,Login to communicate with your friend</h1>
-  <%= link_to "Login", login_path, class: 'btn btn-primary' %>
+<h1 id="word">U havent login yet,Login to communicate with your friend</h1>
+  <h2 id="word1"><%= link_to "Login", login_path, class: 'btn btn-primary custom',size: '30px' %></h2>
 <%end%>
 
 <% content_for :js do%>

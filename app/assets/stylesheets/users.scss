@@ -9,7 +9,9 @@ input, textarea, select, .uneditable-input {
   margin-bottom: 15px;
   @include box_sizing;
 }
-
+label {
+  color: red;
+}
 input {
   height: auto !important;
 }

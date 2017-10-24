@@ -1,7 +1,12 @@
 body {
   padding-top: 60px;
+  background-image: url(418724.jpg)
 }
-
+.jumbotron {
+  background-color: transparent;
+  font-size: 30px;
+  color: red;
+}
 section {
   overflow: auto;
 }
@@ -46,6 +51,8 @@ p {
 .lead
 {
   text-align: center;
+  font-size: 2em;
+  font: 20px;
 }
 .nav-item
 {
@@ -56,7 +63,11 @@ p {
 
 }
 .navbar a{
-  color: gray ;
+  color: brown ;
+  font-size: 30px;
+}
+.navbar {
+  background-color: transparent;
 }
 .navbar.brand
 {
@@ -66,7 +77,21 @@ p {
 }
 .navbar .navbar-expand-lg .navbar-light .bg-light {
   color: gray;
+  background-color: transparent;
 }
-#search navbar nav-link{
-  color: gray;
+.navbar .brand a{
+  font-size: 50px;
+  color: red;
+}
+#word {
+  color: red;
+}
+#cool center{
+  font-size: 30px;
+}
+.btn-primary h2{
+    font-size: 30px;
+}
+.custom {
+    font-size: 30px !important;
 }
