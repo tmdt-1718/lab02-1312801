@@ -2,6 +2,7 @@
   <li class="breadcrumb-item"><a><%= link_to "Home",sessions_path%></a></li>
   <li class="breadcrumb-item active">Messages</li>
 </ol>
+
 <%if logged_in?%>
   <% if @conversations.count ==0%>
   <p>U dont have any conversations</p>

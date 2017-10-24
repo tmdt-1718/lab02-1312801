@@ -1,19 +1,27 @@
-<%= form_for (@user) do |f| %>
-<li>
-  <%= f.label :name%>
-  <%= f.text_field :name, class: 'form-control'%>
-</li>
-<li>
-  <%= f.label :email%>
-  <%= f.text_field :email, class: 'form-control'%>
-</li>
-<li>
-  <%= f.label :password%>
-  <%= f.password_field :password,class: 'form-control'%>
-</li>
-<li>
-  <%= f.label :password%>
-  <%= f.password_field :password,class: 'form-control'%>
-  <%= f.submit "Create my account", class: 'btn btn-primary' %>
-</li>
-<%end%>
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a><%= link_to "Home",sessions_path%></a></li>
+  <li class="breadcrumb-item active">Signup</li>
+</ol>
+<div class="row">
+  <div class="col-md-6">
+  <%= form_for (@user) do |f| %>
+  <li>
+    <%= f.label :name%>
+    <%= f.text_field :name, class: 'form-control'%>
+  </li>
+  <li>
+    <%= f.label :email%>
+    <%= f.text_field :email, class: 'form-control'%>
+  </li>
+  <li>
+    <%= f.label :password%>
+    <%= f.password_field :password,class: 'form-control'%>
+  </li>
+  <li>
+    <%= f.label :password%>
+    <%= f.password_field :password,class: 'form-control'%>
+    <%= f.submit "Create my account", class: 'btn btn-primary' %>
+  </li>
+  <%end%>
+  </div>
+</div>

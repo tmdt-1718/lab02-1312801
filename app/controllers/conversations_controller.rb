@@ -2,14 +2,16 @@ class ConversationsController < ApplicationController
   before_action :set_conversation, except: [:index]
 before_action :check_participating!, except: [:index]
 def index
+  if(params[:user_id])
   @conversations = Conversation.participating(current_user).order('updated_at DESC')
+end
 end
 def new
   redirect_to conversation_path(@conversation) and return if @conversation
   @message = current_user.messages.build
 end
 def show
-  
+
   @receiver = User.find_by(id: params[:receiver_id])
 @message = Message.new
   impressionist(@conversation)

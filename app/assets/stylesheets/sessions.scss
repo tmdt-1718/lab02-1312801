@@ -1,3 +1,72 @@
-// Place all the styles related to the sessions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #777;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+.lead
+{
+  text-align: center;
+}
+.nav-item
+{
+  margin-left: 10px;
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  color: gray;
+
+}
+.navbar a{
+  color: gray ;
+}
+.navbar.brand
+{
+  font-size: 1.5em;
+  letter-spacing: -1px;
+  margin-top: 10px;
+}
+.navbar .navbar-expand-lg .navbar-light .bg-light {
+  color: gray;
+}
+#search navbar nav-link{
+  color: gray;
+}

@@ -1,3 +1,7 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a><%= link_to "Home",sessions_path%></a></li>
+  <li class="breadcrumb-item active">Login</li>
+</ol>
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(:session, url: login_path) do |f| %>
