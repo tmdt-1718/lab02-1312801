@@ -7,5 +7,5 @@ test:
   secret: e15a69c427691db22035e9cd9eea2f79
 
 production:
-  app_id: 23456
-  secret: bcdefg
+  app_id: 2021434918141226
+  secret: e98ea6ed2d78bcd36408f03529700dfa
