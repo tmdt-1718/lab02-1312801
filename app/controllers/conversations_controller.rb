@@ -4,9 +4,9 @@ before_action :check_participating!, except: [:index]
 def index
   if(params[:user_id])
   @conversations = Conversation.participating(current_user).order('updated_at DESC')
-else
-@conversations=Conversation.all
 end
+@conversations=Conversation.all
+
 end
 def new
   redirect_to conversation_path(@conversation) and return if @conversation
