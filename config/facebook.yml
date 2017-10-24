@@ -1,3 +1,11 @@
 development:
-app_id: 286795618485948
-secret: ba02f0735cfdd4126f2ab68c0c00288d
+  app_id: 134969063759956
+  secret: e15a69c427691db22035e9cd9eea2f79
+
+test:
+  app_id: 134969063759956
+  secret: e15a69c427691db22035e9cd9eea2f79
+
+production:
+  app_id: 23456
+  secret: bcdefg
