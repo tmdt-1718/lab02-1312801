@@ -1,14 +1,9 @@
 development:
   facebook:
-app_id: 169316370317221
-secret: 0d61cf0ca4addbe95d838b8120cba04c
+app_id: 134969063759956
+secret: e15a69c427691db22035e9cd9eea2f79
 
 test:
   facebook:
-app_id: 169316370317221
-secret: 0d61cf0ca4addbe95d838b8120cba04c
-
-production:
-  facebook:
-app_id: 169316370317221
-secret: 0d61cf0ca4addbe95d838b8120cba04c
+app_id: 134969063759956
+secret: e15a69c427691db22035e9cd9eea2f79
