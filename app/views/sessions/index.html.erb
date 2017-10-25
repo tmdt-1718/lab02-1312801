@@ -27,6 +27,12 @@
 </nav>
 <div class="row">
   <div class="col-md-12">
+    <% if logged_in?%>
+    <div class="jumbotron">
+      <h1 class="display-3">FastMail</h1>
+      <p class="lead"><center>This is the page u can send email</center></p>
+    </div>
+    <% else%>
     <div class="jumbotron">
       <h1 class="display-3">FastMail</h1>
       <p class="lead"><center>This is the page u can send email</center></p>
@@ -34,5 +40,7 @@
           <a class="btn btn-primary btn-lg" href="/users/new"  role="button">Signup</a>
         </p>
     </div>
+
+    <%end%>
   </div>
 </div>
