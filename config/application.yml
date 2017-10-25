@@ -13,5 +13,5 @@ GMAIL_USERNAME: "dinhvan2804@gmail.com"
 GMAIL_PASSWORD: "vandeptrai28"
 production:
   facebook:
-app_id: 169316370317221
-secret: 0d61cf0ca4addbe95d838b8120cba04c
+app_id: 849681765214401
+secret: fed20cddbc674529ba63bdee51fec143
