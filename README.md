@@ -5,7 +5,7 @@
 Thành viên:
 * [x] **1312801** Nguyễn Ngọc Đình Văn
 
-URL: agile-eyrie-65599.herokuapp.com
+URL: https://agile-eyrie-65599.herokuapp.com/
 
 ## Yêu cầu
 
