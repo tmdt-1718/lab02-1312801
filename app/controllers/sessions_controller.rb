@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
   def show
   end
   def create
-    if params[:sessions].present?
+    if params[:session].present?
     user = User.find_by(email: params[:session][:email].downcase)
     #byebug
     if user && user.authenticate(params[:session][:password])

@@ -5,6 +5,7 @@
   <div class="card-body">
     <h4><%=message.body%></h4>
     <span class="timestamp">
+      <%= image_tag message.picture.url if message.picture? %> </br>
      Posted <%= time_ago_in_words(message.created_at) %> ago.</br>
    </span>
   </div>
