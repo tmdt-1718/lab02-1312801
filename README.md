@@ -5,7 +5,7 @@
 Thành viên:
 * [x] **1312801** Nguyễn Ngọc Đình Văn
 
-URL: **URL hosting của bài tập**
+URL: agile-eyrie-65599.herokuapp.com
 
 ## Yêu cầu
 
@@ -43,9 +43,7 @@ Liệt kê các **yêu cầu nâng cao** đã thực hiện:
 
 ## Demo
 
-Link ảnh GIF demo ứng dụng:
-
-![Video Walkthrough](demo.gif)
+Link Youtube demo ứng dụng: https://youtu.be/wwrie4pG4F0
 
 Tạo ảnh GIF với chương trình [LiceCap](http://www.cockos.com/licecap/).
 
